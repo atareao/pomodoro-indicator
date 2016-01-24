@@ -1,0 +1,30 @@
+==================
+Pomodoro-Indicator
+==================
+
+Pomodoro-Indicator an indicator to work with the Pomodoro Technique
+
+For more information, please visit our website:
+http://launchpad.net/pomodoro-indicator/
+or
+http://www.atareao.es
+
+============
+Requirements
+============
+
+Required dependencies:
+
+	gir1.2-gtk-3.0,
+	gir1.2-gdkpixbuf-2.0,
+	gir1.2-appindicator3-0.1,
+	gir1.2-notify-0.7,
+	python-dbus
+
+========
+Download
+========
+
+Download the package:
+
+    $ bzr branch lp:pomodoro-indicator

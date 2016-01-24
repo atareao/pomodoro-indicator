@@ -1,0 +1,16 @@
+[Desktop Entry]
+_Name = Pomodoro-Indicator
+_GenericName = Pomodoro-Indicator
+_Comment = An indicator for working with Pomodoro Technique
+Exec = /opt/extras.ubuntu.com/pomodoro-indicator/bin/pomodoro-indicator
+Icon = /opt/extras.ubuntu.com/pomodoro-indicator/share/pomodoro-indicator/icons/pomodoro-indicator.svg
+Type = Application
+Terminal = false
+StartupNotify = true
+Encoding = UTF-8
+Categories = Utility;
+X-Ubuntu-Gettext-Domain = pomodoro-indicator
+$Name[es] = _('Pomodoro-Indicator')
+$GenericName[es] = _('Pomodoro-Indicator')
+$Comment[es] = _('An indicator for working with Pomodoro Technique')
+

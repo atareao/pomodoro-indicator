@@ -1,0 +1,11 @@
+pomodoro-indicator (0.1.0-0extras15.10.0) wily; urgency=medium
+
+  * Upgraded to wily
+
+ -- Lorenzo Carbonell <lorenzo.carbonell.cerezo@gmail.com>  Sun, 24 Jan 2016 10:14:30 +0100
+
+pomodoro-indicator (0.1.0-0extras14.04.1) trusty; urgency=low
+
+  * First release
+
+ -- Lorenzo Carbonell <atareao@trusty>  Fri, 02 May 2014 10:40:01 +0200

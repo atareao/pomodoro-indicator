@@ -1,0 +1,19 @@
+Source: pomodoro-indicator
+Section: utils
+Priority: extra
+Maintainer: Lorenzo Carbonell Cerezo <lorenzo.carbonell.cerezo@gmail.com>
+Build-Depends: debhelper (>= 8), python, python-distutils-extra, python-polib
+Standards-Version: 3.9.3
+Homepage: http://www.atareao.es
+
+Package: pomodoro-indicator
+Architecture: all
+Depends: ${misc:Depends}, ${python:Depends},
+	gir1.2-gtk-3.0,
+	gir1.2-gdkpixbuf-2.0,
+	gir1.2-appindicator3-0.1,
+	gir1.2-notify-0.7,
+	python3-dbus
+Description: An indicator for working with Pomodoro Technique
+ With Pomodoro-Indicator you have a tool to work with the
+ Pomodoro Technique.
