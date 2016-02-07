@@ -83,6 +83,7 @@ class Pomodoro_Indicator(GObject.GObject):
 		self.active = False
 		self.animate = False
 		self.frame = 0
+		self.pomodoros = 0
 		self.notification = Notify.Notification.new('','', None)
 		self.read_preferences()
 		#
@@ -98,8 +99,6 @@ class Pomodoro_Indicator(GObject.GObject):
 		self.connect('break_end',self.on_break_end)
 
 	def on_break_end(self,widget):
-		self.active = False
-		self.animate = False
 		self.frame = 0
 		self.notification.update('Pomodoro-Indicator',
 					_('Break ends'), os.path.join(comun.ICONDIR,'pomodoro-indicator-%s.svg'%(self.theme)))
@@ -107,14 +106,33 @@ class Pomodoro_Indicator(GObject.GObject):
 		if self.play_sounds:
 			self.play(self.break_sound_file)
 		self.indicator.set_icon(os.path.join(comun.ICONDIR,'pomodoro-start-%s.svg'%(self.theme)))
+		self.pomodoros+=1
+		if self.pomodoros < self.max_pomodoros:			
+			self.notification.update('Pomodoro-Indicator',
+						_('Session starts'), os.path.join(comun.ICONDIR,'pomodoro-start-%s.svg'%(self.theme)))
+			self.notification.show()			
+			interval = int(self.session_length*60/36*1000)
+			GLib.timeout_add(interval, self.countdown_session)
+		else:
+			self.pomodoros = 0
+			self.animate = False
+			self.active = False
+			self.pomodoro_start.set_sensitive(True)
+			self.pomodoro_stop.set_sensitive(False)
+			
 			
 	def on_session_end(self,widget):
 		self.active = True
 		self.countdown_break()
-		interval = int(self.break_length*60/36*1000)
 		self.frame = 0
-		self.notification.update('Pomodoro-Indicator',
-					_('Session ends - break starts'), os.path.join(comun.ICONDIR,'pomodoro-indicator-%s.svg'%(self.theme)))
+		if self.pomodoros == self.max_pomodoros - 1:
+			interval = int(self.long_break_length*60/36*1000)
+			self.notification.update('Pomodoro-Indicator',
+						_('Session ends - long break starts'), os.path.join(comun.ICONDIR,'pomodoro-indicator-%s.svg'%(self.theme)))
+		else:
+			interval = int(self.break_length*60/36*1000)
+			self.notification.update('Pomodoro-Indicator',
+						_('Session ends - break starts'), os.path.join(comun.ICONDIR,'pomodoro-indicator-%s.svg'%(self.theme)))
 		self.notification.show()
 		if self.play_sounds:
 			self.play(self.session_sound_file)
@@ -154,8 +172,10 @@ class Pomodoro_Indicator(GObject.GObject):
 		self.first_time = configuration.get('first-time')
 		self.version = configuration.get('version')
 		self.theme = configuration.get('theme')
+		self.max_pomodoros = configuration.get('number_of_pomodoros')
 		self.session_length = configuration.get('session_length')
 		self.break_length = configuration.get('break_length')
+		self.long_break_length = configuration.get('long_break_length')
 		self.play_sounds = configuration.get('play_sounds')
 		self.session_sound_file = configuration.get('session_sound_file')
 		self.break_sound_file = configuration.get('break_sound_file')
@@ -248,6 +268,7 @@ class Pomodoro_Indicator(GObject.GObject):
 
 	def on_pomodoro_stop(self,widget):
 		self.active = False
+		self.pomodoros = 0
 		self.pomodoro_start.set_sensitive(True)
 		self.pomodoro_stop.set_sensitive(False)
 		self.notification.update('Pomodoro-Indicator',

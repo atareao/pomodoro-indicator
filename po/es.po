@@ -2,7 +2,7 @@
 # Copyright (C) 2014 THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # Lorenzo Carbonell <lorenzo.carbonell.cerezo@gmail.com>, 2014.
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: pomodoro-indicator 0.1.0\n"
@@ -60,7 +60,11 @@ msgstr "El descanso ha terminado"
 
 #: /home/atareao/Copy/PROGRAMACION/Python/trusty/pomodoro-indicator/src/pomodoro_indicator.py:117
 msgid "Session ends - break starts"
-msgstr "La sessión ha terminado comoienza un descanso"
+msgstr "La sesión ha terminado comienza un descanso"
+
+#: /home/atareao/Copy/PROGRAMACION/Python/trusty/pomodoro-indicator/src/pomodoro_indicator.py:131
+msgid "Session ends - long break starts"
+msgstr "La sesión ha terminado comienza un descanso largo"
 
 #: /home/atareao/Copy/PROGRAMACION/Python/trusty/pomodoro-indicator/src/pomodoro_indicator.py:170
 msgid "Homepage..."

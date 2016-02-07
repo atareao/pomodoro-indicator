@@ -62,6 +62,10 @@ msgstr ""
 msgid "Session ends - break starts"
 msgstr ""
 
+#: /home/atareao/Copy/PROGRAMACION/Python/trusty/pomodoro-indicator/src/pomodoro_indicator.py:131
+msgid "Session ends - long break starts"
+msgstr ""
+
 #: /home/atareao/Copy/PROGRAMACION/Python/trusty/pomodoro-indicator/src/pomodoro_indicator.py:170
 msgid "Homepage..."
 msgstr ""
