@@ -46,6 +46,8 @@ PARAMS = {
 			'theme':'light',
 			'session_length':25,
 			'break_length':5,
+			'long_break_length':20,
+			'number_of_pomodoros':4,
 			'play_sounds':True,
 			'session_sound_file':'default',
 			'break_sound_file':'default'
