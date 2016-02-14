@@ -35,6 +35,10 @@ msgid "Set break length (minutes)"
 msgstr "Indica la duración de un descanso (minutos)"
 
 #: /home/atareao/Copy/PROGRAMACION/Python/trusty/pomodoro-indicator/src/preferences_dialog.py:107
+msgid "Set long break length (minutes)"
+msgstr "Indica la duración de un descanso largo (minutos)"
+
+#: /home/atareao/Copy/PROGRAMACION/Python/trusty/pomodoro-indicator/src/preferences_dialog.py:107
 msgid "Play sounds"
 msgstr "Reproduce sonidos"
 

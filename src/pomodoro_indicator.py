@@ -271,6 +271,7 @@ class Pomodoro_Indicator(GObject.GObject):
 		self.pomodoros = 0
 		self.pomodoro_start.set_sensitive(True)
 		self.pomodoro_stop.set_sensitive(False)
+		self.indicator.set_icon(os.path.join(comun.ICONDIR,'pomodoro-start-%s.svg'%(self.theme)))
 		self.notification.update('Pomodoro-Indicator',
 					_('Session stop'), os.path.join(comun.ICONDIR,'pomodoro-stop-%s.svg'%(self.theme)))
 		self.notification.show()
