@@ -312,7 +312,7 @@ class Pomodoro_Indicator(GObject.GObject):
 		about_dialog = Gtk.AboutDialog()
 		about_dialog.set_name(comun.APPNAME)
 		about_dialog.set_version(comun.VERSION)
-		about_dialog.set_copyright('Copyrignt (c) 2014\nLorenzo Carbonell Cerezo')
+		about_dialog.set_copyright('Copyrignt (c) 2014-2016\nLorenzo Carbonell Cerezo')
 		about_dialog.set_comments(_('An indicator for Pomodoro Technique'))
 		about_dialog.set_license(''+
 		'This program is free software: you can redistribute it and/or modify it\n'+

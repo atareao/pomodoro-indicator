@@ -69,7 +69,7 @@ def select_value_in_combo(combo,value):
 class PreferencesDialog(Gtk.Dialog):
 	def __init__(self):
 		#
-		Gtk.Dialog.__init__(self, 'PushBullet Indicator | '+_('Preferences'),None,Gtk.DialogFlags.MODAL | Gtk.DialogFlags.DESTROY_WITH_PARENT,(Gtk.STOCK_CANCEL, Gtk.ResponseType.REJECT,Gtk.STOCK_OK, Gtk.ResponseType.ACCEPT))
+		Gtk.Dialog.__init__(self, 'Pomodoro Indicator | '+_('Preferences'),None,Gtk.DialogFlags.MODAL | Gtk.DialogFlags.DESTROY_WITH_PARENT,(Gtk.STOCK_CANCEL, Gtk.ResponseType.REJECT,Gtk.STOCK_OK, Gtk.ResponseType.ACCEPT))
 		self.set_position(Gtk.WindowPosition.CENTER_ALWAYS)
 		#self.set_size_request(400, 230)
 		self.connect('close', self.close_application)
