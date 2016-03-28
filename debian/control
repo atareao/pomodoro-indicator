@@ -9,11 +9,15 @@ Homepage: http://www.atareao.es
 Package: pomodoro-indicator
 Architecture: all
 Depends: ${misc:Depends}, ${python:Depends},
-	gir1.2-gtk-3.0,
-	gir1.2-gdkpixbuf-2.0,
-	gir1.2-appindicator3-0.1,
-	gir1.2-notify-0.7,
-	python3-dbus
+    gir1.2-gtk-3.0,
+    gir1.2-gdkpixbuf-2.0,
+    gir1.2-gstreamer-1.0,
+    gir1.2-gst-plugins-base-1.0,
+    gir1.2-appindicator3-0.1,
+    gir1.2-notify-0.7,
+    python3,
+    python3-gi,
+    python3-dbus
 Description: An indicator for working with Pomodoro Technique
  With Pomodoro-Indicator you have a tool to work with the
  Pomodoro Technique.
