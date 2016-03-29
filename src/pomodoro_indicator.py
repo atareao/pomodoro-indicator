@@ -105,10 +105,7 @@ class Pomodoro_Indicator(GObject.GObject):
         self.connect('break_end', self.on_break_end)
 
     def on_scroll(self, widget, steps, direcction):
-        if self.active:
-            self.on_pomodoro_stop(None)
-        else:
-            self.on_pomodoro_start(None)
+        self.on_pomodoro_start(None)
 
     def play(self, afile):
         self.player.set_property('uri', 'file://'+afile)
@@ -278,6 +275,7 @@ issues'))
             self.stop_working_process()
             self.active = False
             self.pomodoros = 0
+            self.frame = 0
             self.pomodoro_start.set_label(_('Start'))
             icon = os.path.join(comun.ICONDIR,
                                 'pomodoro-start-%s.svg' % (self.theme))
