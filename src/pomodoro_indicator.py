@@ -22,6 +22,14 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 import gi
+try:
+    gi.require_version('Gtk', '3.0')
+    gi.require_version('Gst', '1.0')
+    gi.require_version('AppIndicator3', '0.1')
+    gi.require_version('Notify', '0.7')
+except Exception as e:
+    print(e)
+    exit(1)
 from gi.repository import Gtk
 from gi.repository import Gst
 from gi.repository import GLib
@@ -67,7 +75,6 @@ def add2menu(menu, text=None, icon=None, conector_event=None,
 
 
 class Pomodoro_Indicator(GObject.GObject):
-
     __gsignals__ = {
         'session_end': (GObject.SIGNAL_RUN_FIRST, GObject.TYPE_NONE, ()),
         'break_end': (GObject.SIGNAL_RUN_FIRST, GObject.TYPE_NONE, ()),

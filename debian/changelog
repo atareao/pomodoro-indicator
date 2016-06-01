@@ -1,9 +1,9 @@
-pomodoro-indicator (0.2.0-0extras15.10.2) wily; urgency=medium
+pomodoro-indicator (0.2.0-0extras15.10.3) wily; urgency=medium
 
   * Updated README
   * Fixed dependencies
 
- -- Lorenzo Carbonell <lorenzo.carbonell.cerezo@gmail.com>  Tue, 29 Mar 2016 23:45:26 +0200
+ -- Lorenzo Carbonell <lorenzo.carbonell.cerezo@gmail.com>  Wed, 01 Jun 2016 22:17:24 +0200
 
 pomodoro-indicator (0.2.0-0extras15.10.0) wily; urgency=medium
 
