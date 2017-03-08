@@ -62,7 +62,7 @@ COMPILED_LANGUAGE_FILE = '%s.mo' % APP
 def get_entry(filein, msgid):
     try:
         po = polib.pofile(filein)
-        print po.metadata['Content-Type']
+        print(po.metadata['Content-Type'])
         for entry in po:
             if entry.msgid == msgid:
                 return entry.msgstr
