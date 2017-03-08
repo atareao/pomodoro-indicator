@@ -239,6 +239,11 @@ issues'))
         self.pomodoro_start.show()
         menu.append(self.pomodoro_start)
 
+        self.pomodoro_restart = Gtk.MenuItem.new_with_label(_('Re-start'))
+        self.pomodoro_restart.connect('activate', self.on_pomodoro_restart)
+        self.pomodoro_restart.show()
+        menu.append(self.pomodoro_restart)
+
         separator1 = Gtk.SeparatorMenuItem()
         separator1.show()
         menu.append(separator1)
@@ -264,6 +269,29 @@ issues'))
         #
         menu.show()
         return(menu)
+
+    def on_pomodoro_restart(self, widget):
+        if not self.active:
+            self.stop_working_process()
+            self.active = False
+            self.pomodoros = 0
+            self.frame = 0
+            self.pomodoro_start.set_label(_('Start'))
+            icon = os.path.join(comun.ICONDIR,
+                                'pomodoro-start-%s.svg' % (self.theme))
+            self.indicator.set_icon(icon)
+
+            self.active = True
+            self.pomodoro_start.set_label(_('Stop'))
+            self.notification.update('Pomodoro-Indicator',
+                                     _('Session starts'),
+                                     os.path.join(comun.ICONDIR,
+                                                  'pomodoro-start-%s.svg' % (
+                                                    self.theme)))
+            self.notification.show()
+            self.countdown_session()
+            interval = int(self.session_length * 60 / TOTAL_FRAMES)
+            self.start_working_process(interval, self.countdown_session)
 
     def on_pomodoro_start(self, widget):
         if not self.active:
