@@ -19,7 +19,7 @@ import configparser
 import codecs
 
 
-DESTDIR = '/opt/extras.ubuntu.com/pomodoro-indicator/'
+DESTDIR = '/usr/'
 BINDIR = os.path.join(DESTDIR, 'bin')
 SHAREDIR = os.path.join(DESTDIR, 'share')
 DATA_FILES = [
