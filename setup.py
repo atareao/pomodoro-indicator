@@ -15,7 +15,7 @@ import shlex
 import subprocess
 import shutil
 import polib
-import ConfigParser
+import configparser
 import codecs
 
 
@@ -142,7 +142,7 @@ def update_desktop_file_fp():
         ln = os.path.splitext(os.path.split(filein)[1])[0]
         lns.append(ln)
     for filedesktopin in glob.glob('*.desktop.in'):
-        desktopfile = ConfigParser.ConfigParser()
+        desktopfile = configparser.ConfigParser()
         desktopfile.optionxform = str
         desktopfile.readfp(codecs.open(filedesktopin,encoding = 'utf-8',mode='r'))
         if len(lns)>0:
@@ -169,7 +169,7 @@ def update_desktop_file():
         fileout = codecs.open('./data/%s'%desktopfilename,encoding = 'utf-8',mode='w')
         fileout.write('[Desktop Entry]\n')
         #
-        desktopfile = ConfigParser.ConfigParser()
+        desktopfile = configparser.ConfigParser()
         desktopfile.optionxform = str
         desktopfile.readfp(codecs.open('./%s.in'%desktopfilename,encoding = 'utf-8',mode='r'))
         if len(lns)>0:
