@@ -33,7 +33,7 @@ DATA_FILES = [
     (os.path.join(SHAREDIR, 'pomodoro-indicator', 'icons'),
      glob.glob('data/icons/*.svg')),
     ('/usr/share/icons/hicolor/scalable/apps/',
-     ['data/social/pomodoro-indicator.svg']),
+     ['data/icons/pomodoro-indicator.svg']),
     ('/usr/share/applications',
      ['data/extras-pomodoro-indicator.desktop'])]
 
