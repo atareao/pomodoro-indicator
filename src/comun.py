@@ -70,7 +70,7 @@ if not os.path.exists(CONFIG_APP_DIR):
 print(os.path.dirname(os.path.abspath(__file__)))
 
 if is_package():
-    ROOTDIR = '/opt/extras.ubuntu.com/pomodoro-indicator/share/'
+    ROOTDIR = '/usr/share/'
     LANGDIR = os.path.join(ROOTDIR, 'locale-langpack')
     APPDIR = os.path.join(ROOTDIR, APP)
     ICONDIR = os.path.join(APPDIR, 'icons')
