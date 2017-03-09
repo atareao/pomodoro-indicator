@@ -29,8 +29,8 @@ from gi.repository import Gtk
 from gi.repository import Notify
 
 if __name__ == '__main__':
-	if __file__.startswith('/opt/extras.ubuntu.com/pomodoro-indicator') or os.getcwd().startswith('/opt/extras.ubuntu.com/pomodoro-indicator'):
-		sys.path.insert(1, '/opt/extras.ubuntu.com/pomodoro-indicator/share/pomodoro-indicator')
+	if __file__.startswith('/usr/bin/pomodoro-indicator') or os.getcwd().startswith('/usr/bin/pomodoro-indicator'):
+		sys.path.insert(1, '/usr/share/pomodoro-indicator')
 	else:
 		sys.path.insert(1,os.path.normpath(os.path.join(os.getcwd(), '../src')))
 	####################################################################
