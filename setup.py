@@ -32,9 +32,9 @@ DATA_FILES = [
      glob.glob('data/sounds/*.ogg')),
     (os.path.join(SHAREDIR, 'pomodoro-indicator', 'icons'),
      glob.glob('data/icons/*.svg')),
-    ('/usr/share/icons/hicolor/scalable/apps/',
+    (os.path.join(SHAREDIR,'icons', 'hicolor', 'scalable', 'apps'),
      ['data/icons/pomodoro-indicator.svg']),
-    ('/usr/share/applications',
+    (os.path.join(SHAREDIR, 'applications'),
      ['data/extras-pomodoro-indicator.desktop'])]
 
 MAIN_DIR = os.getcwd()
@@ -315,7 +315,7 @@ class build(build_extra.build_extra):
 class install_data(_install_data):
     def run(self):
         for lang in os.listdir('build/locale-langpack/'):
-            lang_dir = os.path.join('share', 'locale-langpack', lang, 'LC_MESSAGES')
+            lang_dir = os.path.join(SHAREDIR, 'locale-langpack', lang, 'LC_MESSAGES')
             lang_file = os.path.join('build', 'locale-langpack', lang, 'LC_MESSAGES', COMPILED_LANGUAGE_FILE)
             self.data_files.append( (lang_dir, [lang_file]) )
         _install_data.run(self)
