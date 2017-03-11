@@ -71,6 +71,8 @@ print(os.path.dirname(os.path.abspath(__file__)))
 
 if is_package():
     ROOTDIR = '/usr/share/'
+    if 'SNAP' in os.environ:
+        ROOTDIR = os.environ["SNAP"] + ROOTDIR
     LANGDIR = os.path.join(ROOTDIR, 'locale-langpack')
     APPDIR = os.path.join(ROOTDIR, APP)
     ICONDIR = os.path.join(APPDIR, 'icons')
