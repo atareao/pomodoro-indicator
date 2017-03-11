@@ -19,7 +19,7 @@ import configparser
 import codecs
 
 
-DESTDIR = '/usr/'
+DESTDIR = 'usr/'
 BINDIR = os.path.join(DESTDIR, 'bin')
 SHAREDIR = os.path.join(DESTDIR, 'share')
 DATA_FILES = [
@@ -315,7 +315,7 @@ class build(build_extra.build_extra):
 class install_data(_install_data):
     def run(self):
         for lang in os.listdir('build/locale-langpack/'):
-            lang_dir = os.path.join('/opt/extras.ubuntu.com/pomodoro-indicator/share', 'locale-langpack', lang, 'LC_MESSAGES')
+            lang_dir = os.path.join('share', 'locale-langpack', lang, 'LC_MESSAGES')
             lang_file = os.path.join('build', 'locale-langpack', lang, 'LC_MESSAGES', COMPILED_LANGUAGE_FILE)
             self.data_files.append( (lang_dir, [lang_file]) )
         _install_data.run(self)
