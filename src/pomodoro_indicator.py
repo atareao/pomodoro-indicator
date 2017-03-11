@@ -37,6 +37,9 @@ from gi.repository import GdkPixbuf
 from gi.repository import AppIndicator3 as appindicator
 from gi.repository import Notify
 from gi.repository import GObject
+
+import pyglet
+
 import os
 import webbrowser
 import dbus
@@ -83,10 +86,10 @@ class Pomodoro_Indicator(GObject.GObject):
     def __init__(self):
         GObject.GObject.__init__(self)
         self.pw = 0
-        self.player = Gst.ElementFactory.make("playbin", "player")
-        self.player.connect("about-to-finish",  self.on_player_finished)
-        bus = self.player.get_bus()
-        bus.connect("message", self.on_player_message)
+        # self.player = Gst.ElementFactory.make("playbin", "player")
+        # self.player.connect("about-to-finish",  self.on_player_finished)
+        # bus = self.player.get_bus()
+        # bus.connect("message", self.on_player_message)
         self.icon = comun.ICON
         self.active_icon = None
         self.about_dialog = None
@@ -115,9 +118,13 @@ class Pomodoro_Indicator(GObject.GObject):
         self.on_pomodoro_start(None)
 
     def play(self, afile):
-        self.player.set_property('uri', 'file://'+afile)
-        self.player.set_state(Gst.State.PLAYING)
+        # self.player.set_property('uri', 'file://'+afile)
+        # self.player.set_state(Gst.State.PLAYING)
+        song = pyglet.media.load(afile)
+        song.play()
+        pyglet.app.run()
 
+    '''
     def on_player_finished(self, player):
         self.player = None
         self.player = Gst.ElementFactory.make("playbin", "player")
@@ -133,6 +140,7 @@ class Pomodoro_Indicator(GObject.GObject):
             self.player.set_state(Gst.State.NULL)
             err, debug = message.parse_error()
             print("Error: %s" % err, debug)
+    '''
 
     # ################# main functions ####################
 
