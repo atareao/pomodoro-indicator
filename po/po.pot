@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: lorenzo.carbonell.cerezo@gmail.com\n"
-"POT-Creation-Date: 2014-05-11 13:32+0200\n"
+"POT-Creation-Date: 2017-08-08 20:05+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,128 +17,128 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: /home/atareao/Copy/PROGRAMACION/Python/trusty/pomodoro-indicator/src/preferences_dialog.py:72
-#: /home/atareao/Copy/PROGRAMACION/Python/trusty/pomodoro-indicator/src/pomodoro_indicator.py:215
+#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/preferences_dialog.py:79
+#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator.py:272
 msgid "Preferences"
 msgstr ""
 
-#: /home/atareao/Copy/PROGRAMACION/Python/trusty/pomodoro-indicator/src/preferences_dialog.py:87
+#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/preferences_dialog.py:99
 msgid "Main"
 msgstr ""
 
-#: /home/atareao/Copy/PROGRAMACION/Python/trusty/pomodoro-indicator/src/preferences_dialog.py:93
+#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/preferences_dialog.py:105
+msgid "Number of pomodoros"
+msgstr ""
+
+#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/preferences_dialog.py:112
 msgid "Set session length (minutes)"
 msgstr ""
 
-#: /home/atareao/Copy/PROGRAMACION/Python/trusty/pomodoro-indicator/src/preferences_dialog.py:100
+#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/preferences_dialog.py:119
 msgid "Set break length (minutes)"
 msgstr ""
 
-#: /home/atareao/Copy/PROGRAMACION/Python/trusty/pomodoro-indicator/src/preferences_dialog.py:107
+#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/preferences_dialog.py:126
 msgid "Set long break length (minutes)"
 msgstr ""
 
-#: /home/atareao/Copy/PROGRAMACION/Python/trusty/pomodoro-indicator/src/preferences_dialog.py:107
+#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/preferences_dialog.py:133
 msgid "Play sounds"
 msgstr ""
 
-#: /home/atareao/Copy/PROGRAMACION/Python/trusty/pomodoro-indicator/src/preferences_dialog.py:117
+#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/preferences_dialog.py:142
 msgid "Sound on session end"
 msgstr ""
 
-#: /home/atareao/Copy/PROGRAMACION/Python/trusty/pomodoro-indicator/src/preferences_dialog.py:127
+#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/preferences_dialog.py:155
 msgid "Sound on break end"
 msgstr ""
 
-#: /home/atareao/Copy/PROGRAMACION/Python/trusty/pomodoro-indicator/src/preferences_dialog.py:137
+#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/preferences_dialog.py:168
 msgid "Autostart"
 msgstr ""
 
-#: /home/atareao/Copy/PROGRAMACION/Python/trusty/pomodoro-indicator/src/preferences_dialog.py:143
+#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/preferences_dialog.py:174
 msgid "Icon light"
 msgstr ""
 
-#: /home/atareao/Copy/PROGRAMACION/Python/trusty/pomodoro-indicator/src/pomodoro_indicator.py:105
-msgid "Break ends"
-msgstr ""
-
-#: /home/atareao/Copy/PROGRAMACION/Python/trusty/pomodoro-indicator/src/pomodoro_indicator.py:117
-msgid "Session ends - break starts"
-msgstr ""
-
-#: /home/atareao/Copy/PROGRAMACION/Python/trusty/pomodoro-indicator/src/pomodoro_indicator.py:131
-msgid "Session ends - long break starts"
-msgstr ""
-
-#: /home/atareao/Copy/PROGRAMACION/Python/trusty/pomodoro-indicator/src/pomodoro_indicator.py:170
-msgid "Homepage..."
-msgstr ""
-
-#: /home/atareao/Copy/PROGRAMACION/Python/trusty/pomodoro-indicator/src/pomodoro_indicator.py:171
-msgid "Get help online..."
-msgstr ""
-
-#: /home/atareao/Copy/PROGRAMACION/Python/trusty/pomodoro-indicator/src/pomodoro_indicator.py:172
-msgid "Translate this application..."
-msgstr ""
-
-#: /home/atareao/Copy/PROGRAMACION/Python/trusty/pomodoro-indicator/src/pomodoro_indicator.py:173
-msgid "Report a bug..."
-msgstr ""
-
-#: /home/atareao/Copy/PROGRAMACION/Python/trusty/pomodoro-indicator/src/pomodoro_indicator.py:175
+#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator.py:180
 msgid "Homepage"
 msgstr ""
 
-#: /home/atareao/Copy/PROGRAMACION/Python/trusty/pomodoro-indicator/src/pomodoro_indicator.py:176
-msgid "Follow us in Twitter"
+#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator.py:188
+msgid "Get help online..."
 msgstr ""
 
-#: /home/atareao/Copy/PROGRAMACION/Python/trusty/pomodoro-indicator/src/pomodoro_indicator.py:177
-msgid "Follow us in Google+"
+#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator.py:197
+msgid "Translate this application..."
 msgstr ""
 
-#: /home/atareao/Copy/PROGRAMACION/Python/trusty/pomodoro-indicator/src/pomodoro_indicator.py:178
-msgid "Follow us in Facebook"
+#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator.py:206
+msgid "Report a bug..."
 msgstr ""
 
-#: /home/atareao/Copy/PROGRAMACION/Python/trusty/pomodoro-indicator/src/pomodoro_indicator.py:191
+#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator.py:219
+msgid "Follow me in Twitter"
+msgstr ""
+
+#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator.py:227
+msgid "Follow me in Google+"
+msgstr ""
+
+#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator.py:236
+msgid "Follow me in Facebook"
+msgstr ""
+
+#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator.py:243
 msgid "About"
 msgstr ""
 
-#: /home/atareao/Copy/PROGRAMACION/Python/trusty/pomodoro-indicator/src/pomodoro_indicator.py:200
+#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator.py:258
+#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator.py:300
+#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator.py:335
 msgid "Start"
 msgstr ""
 
-#: /home/atareao/Copy/PROGRAMACION/Python/trusty/pomodoro-indicator/src/pomodoro_indicator.py:205
-msgid "Stop"
+#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator.py:263
+msgid "Re-start"
 msgstr ""
 
-#: /home/atareao/Copy/PROGRAMACION/Python/trusty/pomodoro-indicator/src/pomodoro_indicator.py:220
+#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator.py:277
 msgid "Help"
 msgstr ""
 
-#: /home/atareao/Copy/PROGRAMACION/Python/trusty/pomodoro-indicator/src/pomodoro_indicator.py:229
+#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator.py:286
 msgid "Exit"
 msgstr ""
 
-#: /home/atareao/Copy/PROGRAMACION/Python/trusty/pomodoro-indicator/src/pomodoro_indicator.py:242
+#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator.py:306
+#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator.py:320
+msgid "Stop"
+msgstr ""
+
+#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator.py:308
+#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator.py:322
+#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator.py:371
 msgid "Session starts"
 msgstr ""
 
-#: /home/atareao/Copy/PROGRAMACION/Python/trusty/pomodoro-indicator/src/pomodoro_indicator.py:254
+#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator.py:340
 msgid "Session stop"
 msgstr ""
 
-#: /home/atareao/Copy/PROGRAMACION/Python/trusty/pomodoro-indicator/src/pomodoro_indicator.py:295
+#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator.py:361
+msgid "Break ends"
+msgstr ""
+
+#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator.py:387
+msgid "Session ends - long break starts"
+msgstr ""
+
+#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator.py:390
+msgid "Session ends - break starts"
+msgstr ""
+
+#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator.py:454
 msgid "An indicator for Pomodoro Technique"
-msgstr ""
-
-#: /home/atareao/Copy/PROGRAMACION/Python/trusty/pomodoro-indicator/extras-pomodoro-indicator.desktop.in:13
-#: /home/atareao/Copy/PROGRAMACION/Python/trusty/pomodoro-indicator/extras-pomodoro-indicator.desktop.in:14
-msgid "Pomodoro-Indicator"
-msgstr ""
-
-#: /home/atareao/Copy/PROGRAMACION/Python/trusty/pomodoro-indicator/extras-pomodoro-indicator.desktop.in:15
-msgid "An indicator for working with Pomodoro Technique"
 msgstr ""
