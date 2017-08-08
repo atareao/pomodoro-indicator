@@ -25,8 +25,11 @@ import gi
 try:
     gi.require_version('Gtk', '3.0')
     gi.require_version('Gst', '1.0')
+    gi.require_version('GLib', '2.0')
+    gi.require_version('GdkPixbuf', '2.0')
     gi.require_version('AppIndicator3', '0.1')
     gi.require_version('Notify', '0.7')
+    gi.require_version('GObject', '2.0')
 except Exception as e:
     print(e)
     exit(1)
@@ -38,9 +41,9 @@ from gi.repository import AppIndicator3 as appindicator
 from gi.repository import Notify
 from gi.repository import GObject
 
-import pyglet
-
 import os
+from player import Player
+from player import Status
 import webbrowser
 import dbus
 from configurator import Configuration
@@ -97,6 +100,7 @@ class Pomodoro_Indicator(GObject.GObject):
         self.animate = False
         self.frame = 0
         self.pomodoros = 0
+        self.player = Player()
         self.notification = Notify.Notification.new('', '', None)
         self.read_preferences()
         #
@@ -114,15 +118,24 @@ class Pomodoro_Indicator(GObject.GObject):
         self.connect('session_end', self.on_session_end)
         self.connect('break_end', self.on_break_end)
 
+    def emit(self, *args):
+        GLib.idle_add(GObject.GObject.emit, self, *args)
+
     def on_scroll(self, widget, steps, direcction):
         self.on_pomodoro_start(None)
 
     def play(self, afile):
         # self.player.set_property('uri', 'file://'+afile)
         # self.player.set_state(Gst.State.PLAYING)
+        if self.player.status == Status.PLAYING:
+            self.player.pause()
+        self.player.set_filename(afile)
+        self.player.play()
+        '''
         song = pyglet.media.load(afile)
         song.play()
         pyglet.app.run()
+        '''
 
     '''
     def on_player_finished(self, player):
@@ -506,6 +519,7 @@ def main():
     Notify.init('pomodoro-indicator')
     pomodoro_indicator = Pomodoro_Indicator()
     Gtk.main()
+
 
 if __name__ == "__main__":
     main()

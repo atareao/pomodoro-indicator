@@ -1,3 +1,9 @@
+pomodoro-indicator (0.2.1-0extras17.04.0) zesty; urgency=medium
+
+  * Using gst
+
+ -- Lorenzo Carbonell <lorenzo.carbonell.cerezo@gmail.com>  Tue, 08 Aug 2017 19:43:54 +0200
+
 pomodoro-indicator (0.2.0-0extras15.10.3) wily; urgency=medium
 
   * Updated README
