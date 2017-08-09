@@ -37,19 +37,19 @@ def ejecuta(comando):
     return valor
 
 
-def list_src():
-    file_txt = os.path.join(MAIN_DIR, 'files.txt')
+def list_src(main_dir, src_dir):
+    file_txt = os.path.join(main_dir, 'files.txt')
     f = open(file_txt, 'w')
-    for file in glob.glob(os.path.join(SRC_DIR, '**', '*.py'), recursive=True):
+    for file in glob.glob(os.path.join(src_dir, '**', '*.py'), recursive=True):
         print(file)
         f.write('%s\n' % file)
     f.close()
     return file_txt
 
 
-def list_languages():
+def list_languages(languages_dir):
     lans = []
-    file_txt = os.path.join(LANGUAGES_DIR, 'languages.txt')
+    file_txt = os.path.join(languages_dir, 'languages.txt')
     if os.path.exists(file_txt) is True:
         f = open(file_txt, 'r')
         for linea in f.readlines():
@@ -57,7 +57,7 @@ def list_languages():
             print(lan)
             lans.append(lan)
         f.close()
-    for file in glob.glob(os.path.join(LANGUAGES_DIR, '*.po')):
+    for file in glob.glob(os.path.join(languages_dir, '*.po')):
         lan = os.path.splitext(os.path.basename(file))[0]
         if lan not in lans:
             lans.append(lan)
@@ -68,32 +68,32 @@ def list_languages():
     return file_txt
 
 
-def update_translations():
-    file_txt = os.path.join(LANGUAGES_DIR, 'languages.txt')
+def update_translations(languages_dir, template, app, version):
+    file_txt = os.path.join(languages_dir, 'languages.txt')
     f = open(file_txt, 'r')
     for file in f.readlines():
         lan = file[:-1]
-        file = os.path.join(LANGUAGES_DIR, lan + '.po')
+        file = os.path.join(languages_dir, lan + '.po')
         print('############################################################')
         print(lan)
         print('############################################################')
         if os.path.exists(file):
-            command = 'msgmerge -U %s %s' % (file, TEMPLATE)
+            command = 'msgmerge -U %s %s' % (file, template)
         else:
             command = 'msginit --output-file=%s --input=%s --locale=%s' % (
-                file, TEMPLATE, lan)
+                file, template, lan)
         print(ejecuta(command))
-        edit_language_file(file)
+        edit_language_file(file, app, version)
     f.close()
 
 
-def edit_language_file(file):
+def edit_language_file(file, app, version):
     fr = open(file, 'r')
     file_out = file + '.new'
     fs = open(file_out, 'w')
     for line in fr.readlines():
         if line.find('Project-Id-Version:') != -1:
-            line = '"Project-Id-Version: %s %s\\n"\n' % (APP, VERSION)
+            line = '"Project-Id-Version: %s %s\\n"\n' % (app, version)
         elif line.find('Content-Type:') != -1:
             line = '"Content-Type: text/plain; charset=UTF-8\\n"\n'
         fs.write(line)
@@ -102,8 +102,8 @@ def edit_language_file(file):
     shutil.move(file_out, file)
 
 
-def remove_security_copies():
-    for file in glob.glob(os.path.join(LANGUAGES_DIR, '*.po~')):
+def remove_security_copies(languages_dir):
+    for file in glob.glob(os.path.join(languages_dir, '*.po~')):
         os.remove(file)
 
 
@@ -132,8 +132,8 @@ def remove_languages_saved_files(dir):
     remove_files(dir, '.po~')
 
 
-def create_temporal_file(dir):
-    temp_file = os.path.join(MAIN_DIR, 'temp_files.txt')
+def create_temporal_file(dir, main_dir):
+    temp_file = os.path.join(main_dir, 'temp_files.txt')
     f = open(temp_file, 'w')
     for file in get_files_in_folder(dir):
         f.write('%s\n' % file)
@@ -141,7 +141,7 @@ def create_temporal_file(dir):
     return temp_file
 
 
-def create_rules(file):
+def create_rules(file, languages_dir, app):
     if os.path.exists(file):
         os.remove(file)
     f = open(file, 'w')
@@ -184,22 +184,23 @@ def create_rules(file):
     f.write('\tdh_install\n')
 
     f.write('\t# Create languages directories\n')
-    file_txt = os.path.join(LANGUAGES_DIR, 'languages.txt')
+    file_txt = os.path.join(languages_dir, 'languages.txt')
     fl = open(file_txt, 'r')
     for lan in fl.readlines():
         lan = lan[:-1]
         f.write('\tmkdir -p ${CURDIR}/debian/%s/usr/share/\
-locale-langpack/%s/LC_MESSAGES\n' % (APP, lan))
+locale-langpack/%s/LC_MESSAGES\n' % (app, lan))
     fl.close()
     f.write('\t# End create languages directories\n')
 
     f.write('\t# Compile languages\n')
-    file_txt = os.path.join(LANGUAGES_DIR, 'languages.txt')
+    file_txt = os.path.join(languages_dir, 'languages.txt')
     fl = open(file_txt, 'r')
     for lan in fl.readlines():
         lan = lan[:-1]
-        f.write('\tmsgfmt template1/%s.po -o ${CURDIR}/debian/%s/usr/share/\
-locale-langpack/%s/LC_MESSAGES/%s.mo\n' % (lan, APP, lan, APP))
+        f.write('\tmsgfmt {0}/{1}.po -o {2}/debian/{3}/usr/share/\
+locale-langpack/{1}/LC_MESSAGES/{3}.mo\n'.format(
+                os.path.basename(languages_dir), lan, '${CURDIR}', app))
     fl.close()
     f.write('\t# End comile languages\n')
     ####################################################################
@@ -262,19 +263,20 @@ def delete_it(file):
             os.remove(file)
 
 
-def babilon():
+def babilon(main_dir, languages_dir, src_dir, author_email, template, app,
+            version):
     print('############################################################')
-    print('Parent dir -> %s' % MAIN_DIR)
-    print('Languages dir -> %s' % LANGUAGES_DIR)
-    print('Source dir -> %s' % SRC_DIR)
+    print('Parent dir -> %s' % main_dir)
+    print('Languages dir -> %s' % languages_dir)
+    print('Source dir -> %s' % src_dir)
     print('############################################################')
     print('Updating template')
     print('############################################################')
-    files_file = list_src()
+    files_file = list_src(main_dir, src_dir)
     print(files_file)
     command = 'xgettext --msgid-bugs-address=%s --language=Python --keyword=\
-_ --keyword=N_ --output=%s --files-from=%s' % (AUTHOR_EMAIL,
-                                               TEMPLATE,
+_ --keyword=N_ --output=%s --files-from=%s' % (author_email,
+                                               template,
                                                files_file)
     print(ejecuta(command))
     delete_it(files_file)
@@ -282,41 +284,52 @@ _ --keyword=N_ --output=%s --files-from=%s' % (AUTHOR_EMAIL,
     print('List languages')
     print('############################################################')
     #
-    list_languages()
+    list_languages(languages_dir)
     #
     print('############################################################')
     print('Updating translations')
     print('############################################################')
-    update_translations()
+    update_translations(languages_dir, template, app, version)
     print('############################################################')
     print('Removing security copies')
     print('############################################################')
-    remove_security_copies()
+    remove_security_copies(languages_dir)
 
 
 if __name__ == '__main__':
-    MAIN_DIR = os.getcwd()
-    DEBIAN_DIR = os.path.join(MAIN_DIR, 'debian')
-    LANGUAGES_DIR = os.path.join(MAIN_DIR, 'po')
-    SRC_DIR = os.path.join(MAIN_DIR, 'src')
-    TEMPLATE = os.path.join(LANGUAGES_DIR, 'po.pot')
-    CHANGELOG = os.path.join(DEBIAN_DIR, 'changelog')
-    if os.path.exists(CHANGELOG):
-        f = open(CHANGELOG, 'r')
+    lang_folder = 'po'
+    debian_folder = 'debian'
+    src_folder = 'src'
+    template_file = 'po.pot'
+    changelog_file = 'changelog'
+    author = 'Lorenzo Carbonell'
+    author_email = 'lorenzo.carbonell.cerezo@gmail.com'
+
+    main_dir = os.getcwd()
+    debian_dir = os.path.join(main_dir, debian_folder)
+    languages_dir = os.path.join(main_dir, lang_folder)
+    src_dir = os.path.join(main_dir, src_folder)
+    template = os.path.join(languages_dir, template_file)
+    changelog = os.path.join(debian_dir, changelog_file)
+
+    if os.path.exists(changelog):
+        f = open(changelog, 'r')
         line = f.readline()
         print(line)
         f.close()
         pos = line.find('(')
         posf = line.find('-', pos)
-        APP = line[:pos].strip()
-        VERSION = line[pos + 1: posf].strip()
-        APPNAME = APP.title()
-        AUTHOR = 'Lorenzo Carbonell'
-        AUTHOR_EMAIL = 'lorenzo.carbonell.cerezo@gmail.com'
-        babilon()
-        rules_file = os.path.join(DEBIAN_DIR, 'rules')
+
+        app = line[:pos].strip()
+        version = line[pos + 1: posf].strip()
+        appname = app.title()
+
+        babilon(main_dir, languages_dir, src_dir, author_email, template, app,
+                version)
+
+        rules_file = os.path.join(debian_dir, 'rules')
         if os.path.exists(rules_file):
             delete_it(rules_file)
-            create_rules(rules_file)
+            create_rules(rules_file, languages_dir, app)
             print(rules_file)
     exit(0)
