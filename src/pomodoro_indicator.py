@@ -178,36 +178,34 @@ class Pomodoro_Indicator(GObject.GObject):
         #
         homepage_item = Gtk.MenuItem(label=_(
             'Homepage'))
-        homepage_item.connect('activate',
-                              lambda x: webbrowser.open(
-                                'http://www.atareao.es/'))
+        homepage_item.connect(
+            'activate', lambda x: webbrowser.open('http://www.atareao.es/'))
         homepage_item.show()
         help_menu.append(homepage_item)
         #
         help_item = Gtk.MenuItem(label=_(
             'Get help online...'))
-        help_item.connect('activate',
-                          lambda x: webbrowser.open(
-                            'http://www.atareao.es/apps/la-tecnica-pomodoro-en\
+        help_item.connect(
+            'activate', lambda x: webbrowser.open(
+                'http://www.atareao.es/apps/la-tecnica-pomodoro-en\
 -ubuntu-con-pomodoro-indicator/'))
         help_item.show()
         help_menu.append(help_item)
         #
         translate_item = Gtk.MenuItem(label=_(
             'Translate this application...'))
-        translate_item.connect('activate',
-                               lambda x: webbrowser.open(
-                                'http://www.atareao.es/apps/la-tecnica-\
+        translate_item.connect(
+            'activate', lambda x: webbrowser.open(
+                'http://www.atareao.es/apps/la-tecnica-\
 pomodoro-en-ubuntu-con-pomodoro-indicator/'))
         translate_item.show()
         help_menu.append(translate_item)
         #
         bug_item = Gtk.MenuItem(label=_(
             'Report a bug...'))
-        bug_item.connect('activate',
-                         lambda x: webbrowser.open(
-                            'https://github.com/atareao/pomodoro-indicator/\
-issues'))
+        bug_item.connect(
+            'activate', lambda x: webbrowser.open(
+                'https://github.com/atareao/pomodoro-indicator/issues'))
         bug_item.show()
         help_menu.append(bug_item)
         #
@@ -217,26 +215,25 @@ issues'))
         #
         twitter_item = Gtk.MenuItem(label=_(
             'Follow me in Twitter'))
-        twitter_item.connect('activate',
-                             lambda x: webbrowser.open(
-                                'https://twitter.com/atareao'))
+        twitter_item.connect(
+            'activate', lambda x: webbrowser.open(
+                'https://twitter.com/atareao'))
         twitter_item.show()
         help_menu.append(twitter_item)
         #
         googleplus_item = Gtk.MenuItem(label=_(
             'Follow me in Google+'))
-        googleplus_item.connect('activate',
-                                lambda x: webbrowser.open(
-                                    'https://plus.google.com/\
-118214486317320563625/posts'))
+        googleplus_item.connect(
+            'activate', lambda x: webbrowser.open(
+                'https://plus.google.com/118214486317320563625/posts'))
         googleplus_item.show()
         help_menu.append(googleplus_item)
         #
         facebook_item = Gtk.MenuItem(label=_(
             'Follow me in Facebook'))
-        facebook_item.connect('activate',
-                              lambda x: webbrowser.open(
-                                'http://www.facebook.com/elatareao'))
+        facebook_item.connect(
+            'activate', lambda x: webbrowser.open(
+                'http://www.facebook.com/elatareao'))
         facebook_item.show()
         help_menu.append(facebook_item)
         #
@@ -292,37 +289,33 @@ issues'))
         return(menu)
 
     def on_pomodoro_restart(self, widget):
-        if not self.active:
-            self.stop_working_process()
-            self.active = False
-            self.pomodoros = 0
-            self.frame = 0
-            self.pomodoro_start.set_label(_('Start'))
-            icon = os.path.join(comun.ICONDIR,
-                                'pomodoro-start-%s.svg' % (self.theme))
-            self.indicator.set_icon(icon)
-
-            self.active = True
-            self.pomodoro_start.set_label(_('Stop'))
-            self.notification.update('Pomodoro-Indicator',
-                                     _('Session starts'),
-                                     os.path.join(comun.ICONDIR,
-                                                  'pomodoro-start-%s.svg' % (
-                                                    self.theme)))
-            self.notification.show()
-            self.countdown_session()
-            interval = int(self.session_length * 60 / TOTAL_FRAMES)
-            self.start_working_process(interval, self.countdown_session)
+        self.stop_working_process()
+        self.active = False
+        self.pomodoros = 0
+        self.frame = 0
+        self.pomodoro_start.set_label(_('Start'))
+        icon = os.path.join(comun.ICONDIR,
+                            'pomodoro-start-%s.svg' % (self.theme))
+        self.indicator.set_icon(icon)
+        self.active = True
+        self.pomodoro_start.set_label(_('Stop'))
+        self.notification.update(
+            'Pomodoro-Indicator', _('Session starts'),
+            os.path.join(comun.ICONDIR, 'pomodoro-start-%s.svg' % (
+                self.theme)))
+        self.notification.show()
+        self.countdown_session()
+        interval = int(self.session_length * 60 / TOTAL_FRAMES)
+        self.start_working_process(interval, self.countdown_session)
 
     def on_pomodoro_start(self, widget):
         if not self.active:
             self.active = True
             self.pomodoro_start.set_label(_('Stop'))
-            self.notification.update('Pomodoro-Indicator',
-                                     _('Session starts'),
-                                     os.path.join(comun.ICONDIR,
-                                                  'pomodoro-start-%s.svg' % (
-                                                    self.theme)))
+            self.notification.update(
+                'Pomodoro-Indicator', _('Session starts'),
+                os.path.join(comun.ICONDIR, 'pomodoro-start-%s.svg' % (
+                    self.theme)))
             self.notification.show()
             self.countdown_session()
             interval = int(self.session_length * 60 / TOTAL_FRAMES)
@@ -370,7 +363,7 @@ issues'))
             self.notification.update('Pomodoro-Indicator',
                                      _('Session starts'), icon)
             self.notification.show()
-            interval = int(self.session_length*60/TOTAL_FRAMES)
+            interval = int(self.session_length * 60 / TOTAL_FRAMES)
             self.start_working_process(interval, self.countdown_session)
         else:
             self.pomodoros = 0
@@ -383,14 +376,14 @@ issues'))
         self.countdown_break()
         self.frame = 61
         if self.pomodoros == self.max_pomodoros - 1:
-            interval = int(self.long_break_length*60/TOTAL_FRAMES)
+            interval = int(self.long_break_length * 60 / TOTAL_FRAMES)
             message = _('Session ends - long break starts')
         else:
-            interval = int(self.break_length*60/TOTAL_FRAMES)
+            interval = int(self.break_length * 60 / TOTAL_FRAMES)
             message = _('Session ends - break starts')
-        icon = os.path.join(comun.ICONDIR,
-                            'pomodoro-indicator-%s-%02d.svg' % (
-                                  self.theme, self.frame))
+        icon = os.path.join(
+            comun.ICONDIR, 'pomodoro-indicator-%s-%02d.svg' % (self.theme,
+                                                               self.frame))
         self.notification.update('Pomodoro-Indicator', message, icon)
         self.notification.show()
         if self.play_sounds:
@@ -405,6 +398,7 @@ issues'))
                                 'pomodoro-indicator-%s-%02d.svg' % (
                                     self.theme, self.frame))
             self.indicator.set_icon(icon)
+            self.indicator.set_label('test', '')
             self.frame = 0
             return False
         else:
@@ -432,9 +426,9 @@ issues'))
             return False
         else:
             self.animate = True
-            afile = os.path.join(comun.ICONDIR,
-                                 'pomodoro-indicator-%s-%02d.svg' % (
-                                    self.theme, self.frame))
+            afile = os.path.join(
+                comun.ICONDIR, 'pomodoro-indicator-%s-%02d.svg' % (self.theme,
+                                                                   self.frame))
             self.indicator.set_icon(afile)
             self.frame -= 1
             print('countdown_break', self.frame)
