@@ -74,7 +74,7 @@ if is_package():
     if 'SNAP' in os.environ:
         ROOTDIR = os.environ["SNAP"] + ROOTDIR
     LANGDIR = os.path.join(ROOTDIR, 'locale-langpack')
-    APPDIR = os.path.join(ROOTDIR, APP)
+    APPDIR = os.path.join(ROOTDIR, 'pomodoro_indicator')
     ICONDIR = os.path.join(APPDIR, 'icons')
     SOCIALDIR = os.path.join(APPDIR, 'social')
     SOUNDIR = os.path.join(APPDIR, 'sounds')

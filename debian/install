@@ -1,5 +1,5 @@
 bin/pomodoro-indicator /usr/bin
-src/pomodoro_indicator*.py /usr/share/pomodoro_indicator/pomodoro_indicator
+src/pomodoro_indicator/*.py /usr/share/pomodoro_indicator/pomodoro_indicator
 debian/changelog /usr/share/pomodoro_indicator
 data/pomodoro-indicator-autostart.desktop /usr/share/pomodoro_indicator
 data/pomodoro-indicator.desktop /usr/share/applications
