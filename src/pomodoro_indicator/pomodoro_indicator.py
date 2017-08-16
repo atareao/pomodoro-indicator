@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
-# pomodoro-indicator.py
+# pomodoro_indicator.py
 #
 # This file is part of Pomodoro-Indicator
 #
-# Copyright (C) 2014
+# Copyright (C) 2014 - 2017
 # Lorenzo Carbonell Cerezo <lorenzo.carbonell.cerezo@gmail.com>
 #
 # This program is free software: you can redistribute it and/or modify
@@ -42,17 +42,14 @@ from gi.repository import Notify
 from gi.repository import GObject
 
 import os
-from player import Player
-from player import Status
 import webbrowser
 import dbus
-from configurator import Configuration
-from preferences_dialog import PreferencesDialog
-from comun import _
-import comun
-
-gi.require_version('Gtk', '3.0')
-gi.require_version('Gst', '1.0')
+from .configurator import Configuration
+from .preferences_dialog import PreferencesDialog
+from .player import Player
+from .player import Status
+from .comun import _
+from . import comun
 
 BUS_NAME = 'es.atareao.pomodoro'
 BUS_PATH = '/es/atareao/pomodoro'
@@ -497,21 +494,18 @@ Lorenzo Carbonell <https://launchpad.net/~lorenzo-carbonell>\n
             self.about_dialog.destroy()
             self.about_dialog = None
 
-#################################################################
-
 
 def main():
-
-    if dbus.SessionBus().\
-                          request_name('es.atareao.PomodoroIndicator') != \
-                          dbus.bus.REQUEST_NAME_REPLY_PRIMARY_OWNER:
+    if dbus.SessionBus().request_name(
+        'es.atareao.PomodoroIndicator') !=\
+            dbus.bus.REQUEST_NAME_REPLY_PRIMARY_OWNER:
         print("application already running")
         exit(0)
     GObject.threads_init()
     Gst.init(None)
     Gst.init_check(None)
     Notify.init('pomodoro-indicator')
-    pomodoro_indicator = Pomodoro_Indicator()
+    Pomodoro_Indicator()
     Gtk.main()
 
 

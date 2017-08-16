@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: lorenzo.carbonell.cerezo@gmail.com\n"
-"POT-Creation-Date: 2017-08-09 10:51+0200\n"
+"POT-Creation-Date: 2017-08-16 14:23+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,128 +17,128 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/preferences_dialog.py:79
-#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator.py:272
+#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator/preferences_dialog.py:78
+#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator/pomodoro_indicator.py:266
 msgid "Preferences"
 msgstr ""
 
-#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/preferences_dialog.py:99
+#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator/preferences_dialog.py:98
 msgid "Main"
 msgstr ""
 
-#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/preferences_dialog.py:105
+#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator/preferences_dialog.py:104
 msgid "Number of pomodoros"
 msgstr ""
 
-#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/preferences_dialog.py:112
+#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator/preferences_dialog.py:111
 msgid "Set session length (minutes)"
 msgstr ""
 
-#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/preferences_dialog.py:119
+#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator/preferences_dialog.py:118
 msgid "Set break length (minutes)"
 msgstr ""
 
-#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/preferences_dialog.py:126
+#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator/preferences_dialog.py:126
 msgid "Set long break length (minutes)"
 msgstr ""
 
-#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/preferences_dialog.py:133
+#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator/preferences_dialog.py:133
 msgid "Play sounds"
 msgstr ""
 
-#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/preferences_dialog.py:142
+#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator/preferences_dialog.py:142
 msgid "Sound on session end"
 msgstr ""
 
-#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/preferences_dialog.py:155
+#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator/preferences_dialog.py:155
 msgid "Sound on break end"
 msgstr ""
 
-#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/preferences_dialog.py:168
+#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator/preferences_dialog.py:168
 msgid "Autostart"
 msgstr ""
 
-#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/preferences_dialog.py:174
+#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator/preferences_dialog.py:174
 msgid "Icon light"
 msgstr ""
 
-#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator.py:180
+#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator/pomodoro_indicator.py:177
 msgid "Homepage"
 msgstr ""
 
-#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator.py:188
+#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator/pomodoro_indicator.py:184
 msgid "Get help online..."
 msgstr ""
 
-#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator.py:197
+#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator/pomodoro_indicator.py:193
 msgid "Translate this application..."
 msgstr ""
 
-#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator.py:206
+#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator/pomodoro_indicator.py:202
 msgid "Report a bug..."
 msgstr ""
 
-#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator.py:219
+#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator/pomodoro_indicator.py:214
 msgid "Follow me in Twitter"
 msgstr ""
 
-#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator.py:227
+#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator/pomodoro_indicator.py:222
 msgid "Follow me in Google+"
 msgstr ""
 
-#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator.py:236
+#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator/pomodoro_indicator.py:230
 msgid "Follow me in Facebook"
 msgstr ""
 
-#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator.py:243
+#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator/pomodoro_indicator.py:237
 msgid "About"
 msgstr ""
 
-#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator.py:258
-#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator.py:300
-#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator.py:335
+#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator/pomodoro_indicator.py:252
+#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator/pomodoro_indicator.py:293
+#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator/pomodoro_indicator.py:325
 msgid "Start"
 msgstr ""
 
-#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator.py:263
+#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator/pomodoro_indicator.py:257
 msgid "Re-start"
 msgstr ""
 
-#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator.py:277
+#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator/pomodoro_indicator.py:271
 msgid "Help"
 msgstr ""
 
-#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator.py:286
+#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator/pomodoro_indicator.py:280
 msgid "Exit"
 msgstr ""
 
-#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator.py:306
-#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator.py:320
+#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator/pomodoro_indicator.py:298
+#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator/pomodoro_indicator.py:311
 msgid "Stop"
 msgstr ""
 
-#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator.py:308
-#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator.py:322
-#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator.py:371
+#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator/pomodoro_indicator.py:300
+#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator/pomodoro_indicator.py:313
+#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator/pomodoro_indicator.py:361
 msgid "Session starts"
 msgstr ""
 
-#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator.py:340
+#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator/pomodoro_indicator.py:330
 msgid "Session stop"
 msgstr ""
 
-#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator.py:361
+#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator/pomodoro_indicator.py:351
 msgid "Break ends"
 msgstr ""
 
-#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator.py:387
+#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator/pomodoro_indicator.py:377
 msgid "Session ends - long break starts"
 msgstr ""
 
-#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator.py:390
+#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator/pomodoro_indicator.py:380
 msgid "Session ends - break starts"
 msgstr ""
 
-#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator.py:454
+#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator/pomodoro_indicator.py:445
 msgid "An indicator for Pomodoro Technique"
 msgstr ""

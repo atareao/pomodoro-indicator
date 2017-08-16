@@ -3,9 +3,9 @@
 #
 # comun.py
 #
-# This file is part of PushBullet-Indicator
+# This file is part of Pomodoro-Indicator
 #
-# Copyright (C) 2014
+# Copyright (C) 2014 - 2017
 # Lorenzo Carbonell Cerezo <lorenzo.carbonell.cerezo@gmail.com>
 #
 # This program is free software: you can redistribute it and/or modify
@@ -34,7 +34,7 @@ __url__ = 'http://www.atareao.es'
 ######################################
 
 def is_package():
-    return not os.path.dirname(os.path.abspath(__file__)).endswith('src')
+    return os.path.abspath(os.path.dirname(__file__)).startswith('/usr')
 
 ######################################
 
@@ -83,15 +83,15 @@ if is_package():
                                         'pomodoro-indicator-autostart.desktop')
 else:
     ROOTDIR = os.path.dirname(__file__)
-    LANGDIR = os.path.join(ROOTDIR, 'template1')
-    APPDIR = os.path.join(ROOTDIR, APP)
-    ICONDIR = os.path.normpath(os.path.join(ROOTDIR, '../data/icons'))
-    SOCIALDIR = os.path.normpath(os.path.join(ROOTDIR, '../data/social'))
-    SOUNDIR = os.path.normpath(os.path.join(ROOTDIR, '../data/sounds'))
-    DEBIANDIR = os.path.normpath(os.path.join(ROOTDIR, '../debian'))
+    LANGDIR = os.path.normpath(os.path.join(ROOTDIR, '../../template1'))
+    APPDIR = ROOTDIR
+    ICONDIR = os.path.normpath(os.path.join(ROOTDIR, '../../data/icons'))
+    SOCIALDIR = os.path.normpath(os.path.join(ROOTDIR, '../../data/social'))
+    SOUNDIR = os.path.normpath(os.path.join(ROOTDIR, '../../data/sounds'))
+    DEBIANDIR = os.path.normpath(os.path.join(ROOTDIR, '../../debian'))
     CHANGELOG = os.path.join(DEBIANDIR, 'changelog')
     FILE_AUTO_START_ORIG = os.path.join(os.path.normpath(os.path.join(
-        ROOTDIR, '../data')), 'pomodoro-indicator-autostart.desktop')
+        ROOTDIR, '../../data')), 'pomodoro-indicator-autostart.desktop')
 ICON = os.path.join(ICONDIR, 'pomodoro-indicator.svg')
 DEFAULT_SESSION_SOUND_FILE = os.path.join(SOUNDIR, 'ringbell.ogg')
 DEFAULT_BREAK_SOUND_FILE = os.path.join(SOUNDIR, 'gong.ogg')

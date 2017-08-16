@@ -3,9 +3,9 @@
 #
 # preferences_dialog.py
 #
-# This file is part of PushBullet-Indicator
+# This file is part of Pomodoro-Indicator
 #
-# Copyright (C) 2014
+# Copyright (C) 2014 - 2017
 # Lorenzo Carbonell Cerezo <lorenzo.carbonell.cerezo@gmail.com>
 #
 # This program is free software: you can redistribute it and/or modify
@@ -22,18 +22,18 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 import gi
-from gi.repository import Gtk
-import comun
-import os
-import shutil
-import glob
-from comun import _
-from configurator import Configuration
-
 try:
     gi.require_version('Gtk', '3.0')
 except Exception as e:
+    print(e)
     exit(1)
+from gi.repository import Gtk
+import os
+import shutil
+import glob
+from . import comun
+from .comun import _
+from .configurator import Configuration
 
 
 def create_or_remove_autostart(create):
@@ -75,8 +75,7 @@ def select_value_in_combo(combo, value):
 
 class PreferencesDialog(Gtk.Dialog):
     def __init__(self):
-        #
-        Gtk.Dialog.__init__(self, 'Pomodoro Indicator | '+_('Preferences'),
+        Gtk.Dialog.__init__(self, 'Pomodoro Indicator | ' + _('Preferences'),
                             None,
                             Gtk.DialogFlags.MODAL |
                             Gtk.DialogFlags.DESTROY_WITH_PARENT,
@@ -102,35 +101,36 @@ class PreferencesDialog(Gtk.Dialog):
         table1 = Gtk.Table(8, 2, False)
         frame1.add(table1)
         #
-        label0 = Gtk.Label(_('Number of pomodoros')+':')
+        label0 = Gtk.Label(_('Number of pomodoros') + ':')
         label0.set_alignment(0, 0.5)
         table1.attach(label0, 0, 1, 0, 1, xpadding=5, ypadding=5)
         self.spinbutton0 = Gtk.SpinButton()
         self.spinbutton0.set_adjustment(Gtk.Adjustment(2, 1, 20, 1, 10, 0))
         table1.attach(self.spinbutton0, 1, 2, 0, 1, xpadding=5, ypadding=5)
         #
-        label1 = Gtk.Label(_('Set session length (minutes)')+':')
+        label1 = Gtk.Label(_('Set session length (minutes)') + ':')
         label1.set_alignment(0, 0.5)
         table1.attach(label1, 0, 1, 1, 2, xpadding=5, ypadding=5)
         self.spinbutton1 = Gtk.SpinButton()
         self.spinbutton1.set_adjustment(Gtk.Adjustment(25, 1, 1440, 1, 10, 0))
         table1.attach(self.spinbutton1, 1, 2, 1, 2, xpadding=5, ypadding=5)
 
-        label2 = Gtk.Label(_('Set break length (minutes)')+':')
+        label2 = Gtk.Label(_('Set break length (minutes)') + ':')
         label2.set_alignment(0, 0.5)
         table1.attach(label2, 0, 1, 2, 3, xpadding=5, ypadding=5)
         self.spinbutton2 = Gtk.SpinButton()
         self.spinbutton2.set_adjustment(Gtk.Adjustment(25, 1, 1440, 1, 10, 0))
         table1.attach(self.spinbutton2, 1, 2, 2, 3, xpadding=5, ypadding=5)
 
-        label_long_break = Gtk.Label(_('Set long break length (minutes)')+':')
+        label_long_break = Gtk.Label(_(
+            'Set long break length (minutes)') + ':')
         label_long_break.set_alignment(0, 0.5)
         table1.attach(label_long_break, 0, 1, 3, 4, xpadding=5, ypadding=5)
         self.spinbutton3 = Gtk.SpinButton()
         self.spinbutton3.set_adjustment(Gtk.Adjustment(25, 1, 1440, 1, 10, 0))
         table1.attach(self.spinbutton3, 1, 2, 3, 4, xpadding=5, ypadding=5)
 
-        label4 = Gtk.Label(_('Play sounds')+':')
+        label4 = Gtk.Label(_('Play sounds') + ':')
         label4.set_alignment(0, 0.5)
         table1.attach(label4, 0, 1, 4, 5, xpadding=5, ypadding=5)
         self.switch4 = Gtk.Switch()
@@ -139,7 +139,7 @@ class PreferencesDialog(Gtk.Dialog):
         sounds = Gtk.ListStore(str, str)
         for sound in get_sounds():
             sounds.append(sound)
-        label5 = Gtk.Label(_('Sound on session end')+':')
+        label5 = Gtk.Label(_('Sound on session end') + ':')
         label5.set_alignment(0, 0.5)
         table1.attach(label5, 0, 1, 5, 6, xpadding=5, ypadding=5)
         self.comboboxsound5 = Gtk.ComboBox.new()
@@ -165,13 +165,13 @@ class PreferencesDialog(Gtk.Dialog):
                       yoptions=Gtk.AttachOptions.FILL,
                       xpadding=5,
                       ypadding=5)
-        label7 = Gtk.Label(_('Autostart')+':')
+        label7 = Gtk.Label(_('Autostart') + ':')
         label7.set_alignment(0, 0.5)
         table1.attach(label7, 0, 1, 7, 8, xpadding=5, ypadding=5)
         self.switch7 = Gtk.Switch()
         table1.attach(self.switch7, 1, 2, 7, 8, xpadding=5, ypadding=5,
                       xoptions=Gtk.AttachOptions.SHRINK)
-        label8 = Gtk.Label(_('Icon light')+':')
+        label8 = Gtk.Label(_('Icon light') + ':')
         label8.set_alignment(0, 0.5)
         table1.attach(label8, 0, 1, 8, 9, xpadding=5, ypadding=5)
         self.switch8 = Gtk.Switch()
