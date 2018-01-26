@@ -1,7 +1,7 @@
 [Desktop Entry]
 Type=Application
-Exec = /usr/bin/pomodoro-indicator
-Icon = pomodoro-indicator
+Exec=/usr/bin/pomodoro-indicator
+Icon=pomodoro-indicator
 Hidden=false
 NoDisplay=false
 X-GNOME-Autostart-enabled=true
