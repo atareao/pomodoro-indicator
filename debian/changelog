@@ -1,9 +1,9 @@
-pomodoro-indicator (0.2.1-0extras17.04.8) zesty; urgency=medium
+pomodoro-indicator (0.2.1-0extras17.04.9) xenial; urgency=medium
 
   * Using gst
   * Remove whitespaces from desktop files #10
 
- -- Lorenzo Carbonell <lorenzo.carbonell.cerezo@gmail.com>  Sun, 25 Feb 2018 08:29:15 +0100
+ -- Lorenzo Carbonell <lorenzo.carbonell.cerezo@gmail.com>  Sun, 25 Feb 2018 10:04:35 +0100
 
 pomodoro-indicator (0.2.0-0extras15.10.3) wily; urgency=medium
 
