@@ -5,7 +5,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: pomodoro-indicator 0.2.1\n"
+"Project-Id-Version: pomodoro-indicator 0.2.2\n"
 "Report-Msgid-Bugs-To: lorenzo.carbonell.cerezo@gmail.com\n"
 "POT-Creation-Date: 2017-08-16 14:23+0200\n"
 "PO-Revision-Date: 2014-05-02 08:26+0200\n"

@@ -5,9 +5,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: pomodoro-indicator 0.2.1\n"
+"Project-Id-Version: pomodoro-indicator 0.2.2\n"
 "Report-Msgid-Bugs-To: lorenzo.carbonell.cerezo@gmail.com\n"
-"POT-Creation-Date: 2017-08-16 14:23+0200\n"
+"POT-Creation-Date: 2018-03-12 13:27+0100\n"
 "PO-Revision-Date: 2018-03-11 11:11+0500\n"
 "Last-Translator: Vadim Barsukov <vadbars@gmail.com>\n"
 "Language-Team: Russian\n"
@@ -15,7 +15,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms:  nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms:  nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
 #: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator/preferences_dialog.py:78
 #: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator/pomodoro_indicator.py:266
@@ -63,8 +64,9 @@ msgid "Icon light"
 msgstr "Светлая иконка"
 
 #: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator/pomodoro_indicator.py:177
-msgid "Главная страница"
-msgstr "Página web"
+#, fuzzy
+msgid "Homepage"
+msgstr "Главная страница..."
 
 #: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator/pomodoro_indicator.py:184
 msgid "Get help online..."
@@ -148,8 +150,8 @@ msgstr "Сессия закончена - начинается перерыв"
 msgid "An indicator for Pomodoro Technique"
 msgstr "Индикатор для техники Pomodoro"
 
-#~ msgid "Homepage..."
-#~ msgstr "Главная страница..."
+#~ msgid "Главная страница"
+#~ msgstr "Página web"
 
 #~ msgid "Pomodoro-Indicator"
 #~ msgstr "Pomdoro-Indicator"

@@ -1,9 +1,15 @@
-pomodoro-indicator (0.2.2-0extras17.04.0) xenial; urgency=medium
+pomodoro-indicator (0.2.2-0extras17.04.2) xenial; urgency=medium
+
+  * Updated Russian translation
+
+ -- Lorenzo Carbonell <lorenzo.carbonell.cerezo@gmail.com>  Mon, 12 Mar 2018 13:28:06 +0100
+
+pomodoro-indicator (0.2.2-0extras17.04.1) xenial; urgency=medium
 
   * Using gst
   * Remove whitespaces from desktop files #10
 
- -- Lorenzo Carbonell <lorenzo.carbonell.cerezo@gmail.com>  Mon, 26 Feb 2018 14:09:11 +0100
+ -- Lorenzo Carbonell <lorenzo.carbonell.cerezo@gmail.com>  Mon, 26 Feb 2018 18:40:38 +0100
 
 pomodoro-indicator (0.2.0-0extras15.10.3) wily; urgency=medium
 
