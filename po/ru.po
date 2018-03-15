@@ -21,7 +21,7 @@ msgstr ""
 #: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator/preferences_dialog.py:78
 #: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator/pomodoro_indicator.py:266
 msgid "Preferences"
-msgstr "Настройик"
+msgstr "Настройки"
 
 #: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator/preferences_dialog.py:98
 msgid "Main"
@@ -64,9 +64,8 @@ msgid "Icon light"
 msgstr "Светлая иконка"
 
 #: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator/pomodoro_indicator.py:177
-#, fuzzy
 msgid "Homepage"
-msgstr "Главная страница..."
+msgstr "Главная страница"
 
 #: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator/pomodoro_indicator.py:184
 msgid "Get help online..."
@@ -106,7 +105,6 @@ msgid "Start"
 msgstr "Запуск"
 
 #: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator/pomodoro_indicator.py:257
-#, fuzzy
 msgid "Re-start"
 msgstr "Перезапуск"
 
@@ -146,16 +144,14 @@ msgid "Session ends - break starts"
 msgstr "Сессия закончена - начинается перерыв"
 
 #: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator/pomodoro_indicator.py:445
-#, fuzzy
 msgid "An indicator for Pomodoro Technique"
 msgstr "Индикатор для техники Pomodoro"
 
-#~ msgid "Главная страница"
-#~ msgstr "Página web"
+#~ msgid "Homepage"
+#~ msgstr "Главная страница"
 
 #~ msgid "Pomodoro-Indicator"
 #~ msgstr "Pomdoro-Indicator"
 
-#, fuzzy
 #~ msgid "An indicator for working with Pomodoro Technique"
 #~ msgstr "Индикатор для работы в технике Pomodoro"
