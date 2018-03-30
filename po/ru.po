@@ -80,17 +80,14 @@ msgid "Report a bug..."
 msgstr "Сообщить об ошибке..."
 
 #: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator/pomodoro_indicator.py:214
-#, fuzzy
 msgid "Follow me in Twitter"
 msgstr "Следить в Twitter"
 
 #: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator/pomodoro_indicator.py:222
-#, fuzzy
 msgid "Follow me in Google+"
 msgstr "Следить в Google+"
 
 #: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator/pomodoro_indicator.py:230
-#, fuzzy
 msgid "Follow me in Facebook"
 msgstr "Следить в Facebook"
 
@@ -146,12 +143,3 @@ msgstr "Сессия закончена - начинается перерыв"
 #: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator/pomodoro_indicator.py:445
 msgid "An indicator for Pomodoro Technique"
 msgstr "Индикатор для техники Pomodoro"
-
-#~ msgid "Homepage"
-#~ msgstr "Главная страница"
-
-#~ msgid "Pomodoro-Indicator"
-#~ msgstr "Pomdoro-Indicator"
-
-#~ msgid "An indicator for working with Pomodoro Technique"
-#~ msgstr "Индикатор для работы в технике Pomodoro"

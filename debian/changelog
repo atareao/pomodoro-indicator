@@ -1,8 +1,8 @@
-pomodoro-indicator (0.2.2-0extras17.04.3) xenial; urgency=medium
+pomodoro-indicator (0.2.2-0extras17.04.4) xenial; urgency=medium
 
   * Updated Russian translation
 
- -- Lorenzo Carbonell <lorenzo.carbonell.cerezo@gmail.com>  Thu, 15 Mar 2018 09:44:07 +0100
+ -- Lorenzo Carbonell <lorenzo.carbonell.cerezo@gmail.com>  Thu, 15 Mar 2018 10:46:33 +0100
 
 pomodoro-indicator (0.2.2-0extras17.04.1) xenial; urgency=medium
 
