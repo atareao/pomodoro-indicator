@@ -34,14 +34,13 @@ install: build
 	dh_installdirs
 	dh_install
 	# Create languages directories
-	mkdir -p ${CURDIR}/debian/pomodoro-indicator/usr/share/locale-langpack/ru/LC_MESSAGES
 	mkdir -p ${CURDIR}/debian/pomodoro-indicator/usr/share/locale-langpack/es/LC_MESSAGES
+	mkdir -p ${CURDIR}/debian/pomodoro-indicator/usr/share/locale-langpack/ru/LC_MESSAGES
 	# End create languages directories
 	# Compile languages
-	msgfmt po/ru.po -o ${CURDIR}/debian/pomodoro-indicator/usr/share/locale-langpack/ru/LC_MESSAGES/pomodoro-indicator.mo
 	msgfmt po/es.po -o ${CURDIR}/debian/pomodoro-indicator/usr/share/locale-langpack/es/LC_MESSAGES/pomodoro-indicator.mo
+	msgfmt po/ru.po -o ${CURDIR}/debian/pomodoro-indicator/usr/share/locale-langpack/ru/LC_MESSAGES/pomodoro-indicator.mo
 	# End comile languages
-
 	# Add here commands to install the package into debian/<packagename>.
 	#$(MAKE) prefix=`pwd`/debian/`dh_listpackages`/usr install
 

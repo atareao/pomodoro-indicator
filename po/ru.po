@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: pomodoro-indicator 0.2.2\n"
-"Report-Msgid-Bugs-To: lorenzo.carbonell.cerezo@gmail.com\n"
-"POT-Creation-Date: 2018-03-12 13:27+0100\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-03-30 19:09+0200\n"
 "PO-Revision-Date: 2018-03-11 11:11+0500\n"
 "Last-Translator: Vadim Barsukov <vadbars@gmail.com>\n"
 "Language-Team: Russian\n"
@@ -18,128 +18,128 @@ msgstr ""
 "Plural-Forms:  nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
-#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator/preferences_dialog.py:78
-#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator/pomodoro_indicator.py:266
+#: src/pomodoro_indicator/preferences_dialog.py:78
+#: src/pomodoro_indicator/pomodoro_indicator.py:266
 msgid "Preferences"
 msgstr "Настройки"
 
-#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator/preferences_dialog.py:98
+#: src/pomodoro_indicator/preferences_dialog.py:98
 msgid "Main"
 msgstr "Основные"
 
-#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator/preferences_dialog.py:104
+#: src/pomodoro_indicator/preferences_dialog.py:104
 msgid "Number of pomodoros"
 msgstr "Количество помидоров"
 
-#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator/preferences_dialog.py:111
+#: src/pomodoro_indicator/preferences_dialog.py:111
 msgid "Set session length (minutes)"
 msgstr "Длина сессии (минуты)"
 
-#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator/preferences_dialog.py:118
+#: src/pomodoro_indicator/preferences_dialog.py:118
 msgid "Set break length (minutes)"
 msgstr "Длина перерыва (минуты)"
 
-#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator/preferences_dialog.py:126
+#: src/pomodoro_indicator/preferences_dialog.py:126
 msgid "Set long break length (minutes)"
 msgstr "Длина большого перерыва (минуты)"
 
-#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator/preferences_dialog.py:133
+#: src/pomodoro_indicator/preferences_dialog.py:133
 msgid "Play sounds"
 msgstr "Звуки"
 
-#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator/preferences_dialog.py:142
+#: src/pomodoro_indicator/preferences_dialog.py:142
 msgid "Sound on session end"
 msgstr "Звук окончания сессии"
 
-#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator/preferences_dialog.py:155
+#: src/pomodoro_indicator/preferences_dialog.py:155
 msgid "Sound on break end"
 msgstr "Звук окончания перерыва"
 
-#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator/preferences_dialog.py:168
+#: src/pomodoro_indicator/preferences_dialog.py:168
 msgid "Autostart"
 msgstr "Автозапуск"
 
-#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator/preferences_dialog.py:174
+#: src/pomodoro_indicator/preferences_dialog.py:174
 msgid "Icon light"
 msgstr "Светлая иконка"
 
-#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator/pomodoro_indicator.py:177
+#: src/pomodoro_indicator/pomodoro_indicator.py:177
 msgid "Homepage"
 msgstr "Главная страница"
 
-#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator/pomodoro_indicator.py:184
+#: src/pomodoro_indicator/pomodoro_indicator.py:184
 msgid "Get help online..."
 msgstr "Помощь онлайн..."
 
-#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator/pomodoro_indicator.py:193
+#: src/pomodoro_indicator/pomodoro_indicator.py:193
 msgid "Translate this application..."
 msgstr "Перевести это приложение..."
 
-#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator/pomodoro_indicator.py:202
+#: src/pomodoro_indicator/pomodoro_indicator.py:202
 msgid "Report a bug..."
 msgstr "Сообщить об ошибке..."
 
-#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator/pomodoro_indicator.py:214
+#: src/pomodoro_indicator/pomodoro_indicator.py:214
 msgid "Follow me in Twitter"
 msgstr "Следить в Twitter"
 
-#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator/pomodoro_indicator.py:222
+#: src/pomodoro_indicator/pomodoro_indicator.py:222
 msgid "Follow me in Google+"
 msgstr "Следить в Google+"
 
-#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator/pomodoro_indicator.py:230
+#: src/pomodoro_indicator/pomodoro_indicator.py:230
 msgid "Follow me in Facebook"
 msgstr "Следить в Facebook"
 
-#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator/pomodoro_indicator.py:237
+#: src/pomodoro_indicator/pomodoro_indicator.py:237
 msgid "About"
 msgstr "О программе..."
 
-#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator/pomodoro_indicator.py:252
-#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator/pomodoro_indicator.py:293
-#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator/pomodoro_indicator.py:325
+#: src/pomodoro_indicator/pomodoro_indicator.py:252
+#: src/pomodoro_indicator/pomodoro_indicator.py:293
+#: src/pomodoro_indicator/pomodoro_indicator.py:325
 msgid "Start"
 msgstr "Запуск"
 
-#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator/pomodoro_indicator.py:257
+#: src/pomodoro_indicator/pomodoro_indicator.py:257
 msgid "Re-start"
 msgstr "Перезапуск"
 
-#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator/pomodoro_indicator.py:271
+#: src/pomodoro_indicator/pomodoro_indicator.py:271
 msgid "Help"
 msgstr "Помощь"
 
-#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator/pomodoro_indicator.py:280
+#: src/pomodoro_indicator/pomodoro_indicator.py:280
 msgid "Exit"
 msgstr "Выход"
 
-#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator/pomodoro_indicator.py:298
-#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator/pomodoro_indicator.py:311
+#: src/pomodoro_indicator/pomodoro_indicator.py:298
+#: src/pomodoro_indicator/pomodoro_indicator.py:311
 msgid "Stop"
 msgstr "Стоп"
 
-#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator/pomodoro_indicator.py:300
-#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator/pomodoro_indicator.py:313
-#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator/pomodoro_indicator.py:361
+#: src/pomodoro_indicator/pomodoro_indicator.py:300
+#: src/pomodoro_indicator/pomodoro_indicator.py:313
+#: src/pomodoro_indicator/pomodoro_indicator.py:361
 msgid "Session starts"
 msgstr "Сессия началась"
 
-#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator/pomodoro_indicator.py:330
+#: src/pomodoro_indicator/pomodoro_indicator.py:330
 msgid "Session stop"
 msgstr "Сессия остановлена"
 
-#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator/pomodoro_indicator.py:351
+#: src/pomodoro_indicator/pomodoro_indicator.py:351
 msgid "Break ends"
 msgstr "Перерыв закончен"
 
-#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator/pomodoro_indicator.py:377
+#: src/pomodoro_indicator/pomodoro_indicator.py:377
 msgid "Session ends - long break starts"
 msgstr "Сессия закончена - начинается большой перерыв"
 
-#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator/pomodoro_indicator.py:380
+#: src/pomodoro_indicator/pomodoro_indicator.py:380
 msgid "Session ends - break starts"
 msgstr "Сессия закончена - начинается перерыв"
 
-#: /datos/Sync/Programacion/Python/pomodoro-indicator/src/pomodoro_indicator/pomodoro_indicator.py:445
+#: src/pomodoro_indicator/pomodoro_indicator.py:445
 msgid "An indicator for Pomodoro Technique"
 msgstr "Индикатор для техники Pomodoro"
