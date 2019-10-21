@@ -5,5 +5,5 @@ Icon=pomodoro-indicator
 Hidden=false
 NoDisplay=false
 X-GNOME-Autostart-enabled=true
-Name=touchpad-indicator-autostart
-Comment=Pomodoro-Indicator autostar
+Name=pomodoro-indicator-autostart
+Comment=Pomodoro-Indicator autostart
