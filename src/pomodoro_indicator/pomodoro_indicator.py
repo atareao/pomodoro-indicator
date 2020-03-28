@@ -33,6 +33,7 @@ try:
 except Exception as e:
     print(e)
     exit(1)
+
 from gi.repository import Gtk
 from gi.repository import Gst
 from gi.repository import GLib
@@ -44,12 +45,12 @@ from gi.repository import GObject
 import os
 import webbrowser
 import dbus
-from .configurator import Configuration
-from .preferences_dialog import PreferencesDialog
-from .player import Player
-from .player import Status
-from .comun import _
-from . import comun
+from configurator import Configuration
+from preferences_dialog import PreferencesDialog
+from player import Player
+from player import Status
+from comun import _
+import comun
 
 BUS_NAME = 'es.atareao.pomodoro'
 BUS_PATH = '/es/atareao/pomodoro'
@@ -300,7 +301,7 @@ pomodoro-en-ubuntu-con-pomodoro-indicator/'))
             'Pomodoro-Indicator', _('Session starts'),
             os.path.join(comun.ICONDIR, 'pomodoro-start-%s.svg' % (
                 self.theme)))
-        self.notification.show()
+        self.send_notification()
         self.countdown_session()
         interval = int(self.session_length * 60 / TOTAL_FRAMES)
         self.start_working_process(interval, self.countdown_session)
@@ -313,7 +314,7 @@ pomodoro-en-ubuntu-con-pomodoro-indicator/'))
                 'Pomodoro-Indicator', _('Session starts'),
                 os.path.join(comun.ICONDIR, 'pomodoro-start-%s.svg' % (
                     self.theme)))
-            self.notification.show()
+            self.send_notification()
             self.countdown_session()
             interval = int(self.session_length * 60 / TOTAL_FRAMES)
             self.start_working_process(interval, self.countdown_session)
@@ -329,7 +330,7 @@ pomodoro-en-ubuntu-con-pomodoro-indicator/'))
             self.notification.update('Pomodoro-Indicator',
                                      _('Session stop'),
                                      icon)
-            self.notification.show()
+            self.send_notification()
 
     def stop_working_process(self):
         if self.pw > 0:
@@ -349,7 +350,7 @@ pomodoro-en-ubuntu-con-pomodoro-indicator/'))
                             'pomodoro-indicator-%s-%02d.svg' % (self.theme,
                                                                 self.frame))
         self.notification.update('Pomodoro-Indicator', _('Break ends'), icon)
-        self.notification.show()
+        self.send_notification()
         if self.play_sounds:
             self.play(self.break_sound_file)
         print('**************************')
@@ -359,7 +360,7 @@ pomodoro-en-ubuntu-con-pomodoro-indicator/'))
         if self.pomodoros < self.max_pomodoros:
             self.notification.update('Pomodoro-Indicator',
                                      _('Session starts'), icon)
-            self.notification.show()
+            self.send_notification()
             interval = int(self.session_length * 60 / TOTAL_FRAMES)
             self.start_working_process(interval, self.countdown_session)
         else:
@@ -382,7 +383,7 @@ pomodoro-en-ubuntu-con-pomodoro-indicator/'))
             comun.ICONDIR, 'pomodoro-indicator-%s-%02d.svg' % (self.theme,
                                                                self.frame))
         self.notification.update('Pomodoro-Indicator', message, icon)
-        self.notification.show()
+        self.send_notification()
         if self.play_sounds:
             self.play(self.session_sound_file)
         self.indicator.set_icon(icon)
@@ -493,6 +494,17 @@ Lorenzo Carbonell <https://launchpad.net/~lorenzo-carbonell>\n
             self.about_dialog.run()
             self.about_dialog.destroy()
             self.about_dialog = None
+
+    def send_notification(self):
+        try:
+            self.notification.show()
+        except GLib.Error as ex:
+            if 'ServiceUnknown' in str(ex):
+                #connection to notification-daemon failed
+                print("Service notification daemon does not exists.")
+                return
+            
+            raise Exception(ex)
 
 
 def main():

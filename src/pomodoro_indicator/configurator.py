@@ -24,7 +24,7 @@
 import codecs
 import os
 import json
-from . import comun
+import comun
 
 
 class Configuration(object):
