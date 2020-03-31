@@ -45,12 +45,12 @@ from gi.repository import GObject
 import os
 import webbrowser
 import dbus
-from configurator import Configuration
-from preferences_dialog import PreferencesDialog
-from player import Player
-from player import Status
-from comun import _
-import comun
+from .configurator import Configuration
+from .preferences_dialog import PreferencesDialog
+from .player import Player
+from .player import Status
+from .comun import _
+from . import comun
 
 BUS_NAME = 'es.atareao.pomodoro'
 BUS_PATH = '/es/atareao/pomodoro'

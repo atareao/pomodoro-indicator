@@ -31,9 +31,9 @@ from gi.repository import Gtk
 import os
 import shutil
 import glob
-import comun
-from comun import _
-from configurator import Configuration
+from . import comun
+from .comun import _
+from .configurator import Configuration
 
 
 def create_or_remove_autostart(create):
