@@ -500,10 +500,9 @@ Lorenzo Carbonell <https://launchpad.net/~lorenzo-carbonell>\n
             self.notification.show()
         except GLib.Error as ex:
             if 'ServiceUnknown' in str(ex):
-                #connection to notification-daemon failed
+                # connection to notification-daemon failed
                 print("Service notification daemon does not exists.")
                 return
-            
             raise Exception(ex)
 
 
