@@ -5,7 +5,7 @@
 #
 # This file is part of Pomodoro-Indicator
 #
-# Copyright (C) 2014 - 2017
+# Copyright (C) 2014
 # Lorenzo Carbonell Cerezo <lorenzo.carbonell.cerezo@gmail.com>
 #
 # This program is free software: you can redistribute it and/or modify
